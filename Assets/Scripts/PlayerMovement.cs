@@ -23,10 +23,10 @@ public class PlayerMovement : MonoBehaviour
 
         var movement = new Vector3(horizontal, 0, vertical);
 
-
+        //PUT BETTER LOGIC HERE!
 
         #region 
-        /* THIS IS THE FIRST LEARNING PART FOR MOVEMENT. UP THERE IS A 3RD PERSON BETTER LOGIC!
+        /* THIS IS THE FIRST LEARNING PART FOR MOVEMENT. UP THERE IS A 3RD PERSON BETTER LOGIC! */
         characterController.SimpleMove(movement * moveSpeed * Time.deltaTime);
 
         animator.SetFloat("Speed", movement.magnitude);
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Quaternion newDirection = Quaternion.LookRotation(movement);
             transform.rotation = Quaternion.Slerp(transform.rotation, newDirection, Time.deltaTime * turnSpeed);
-        } */
+        }
         #endregion
     }
 }
